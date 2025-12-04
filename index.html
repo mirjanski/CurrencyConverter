@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="style.css">
+    <title>Currency Converter App</title>
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel = "icon" href="images/icon.png">
+</head>
+<body>
+    <header>
+        <div class="logo">Currency Converter</div>
+        <div class= "subtitle"><p>Real-time rates • 170+ currencies </p></div>
+    </header>   
+    <nav class = "navbar">
+            <a href="#" class = "active">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    <div class="wrapper">
+            <form action="#">
+            <div class="amount">
+            <input type ="text" placeholder="Amount" value="">
+        </div>
+        <div class="drop-list">
+            <div class="from">
+                <p>From</p>
+                <div class="select-box">
+                    <img src ="https://flagsapi.com/US/flat/64.png" alt="flag">
+                    <select></select>
+                </div>
+            </div>
+            <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+            <div class="to">
+                <p>To</p>
+                <div class="select-box">
+                    <img src ="https://flagsapi.com/KG/flat/64.png" alt="flag">
+                    <select></select>
+                </div>
+            </div>
+        </div>
+        <div class="exchange-rate">
+            <p>Exchange Rate</p>
+            <span>0.00</span>
+        </div>
+        <button>Convert</button>
+    </form>
+    </div>
+    <section id = "about">
+        <div class="about-container">
+            <h2>About</h2>
+            <p>This currency converter website allows users to convert between multiple international currencies using up-to-date exchange rates. It features a clean design, quick calculations, and accurate results, making it suitable for travelers, students, and professionals.</p>
+        </div>
+    </section>
+    <section id = "contact">
+        <div class="contact-container">
+            <h2>Contact</h2>
+            <p>If you have any questions, suggestions, or encounter an issue while using the currency converter, please contact us. We value your feedback and strive to improve our service.
+
+📧 Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=acool.bek.2015@gmail.com&su=Hello,%20Mirjan
+&body=Hi!%0A%0AI%20would%20like%20to%20work%20with%20you.%0A" target="_blank" rel="noopener">acool.bek.2015@gmail.com</a>
+🌐 Available worldwide</p>
+        </div>
+</section>
+<div class="bg"></div>
+<script src="country-list.js"></script>
+<script src ="script.js"></script>
+
+</body>
+</html>
