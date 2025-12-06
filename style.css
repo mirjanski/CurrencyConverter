@@ -17,6 +17,7 @@ body{
     overflow-y: auto;  
     margin: 0;
     padding:0;
+    scroll-behaviour: smooth;
 }
 .bg {
   position: fixed;
@@ -330,4 +331,5 @@ button {
 
 /* 6. Extra safety: ensure text never gets too small */
 * { -webkit-tap-highlight-color: transparent; }
+
 button, .swap-icon { touch-action: manipulation; }
