@@ -238,6 +238,10 @@ form button:hover{
     background: #4f46e5;
     box-shadow: 0 8px 25px rgba(79,70,229,0.4);
 }
+section {
+    min-height: 100vh;
+    padding: 40px;
+}
 #about{
     padding: 60px 20px 60px 20px; 
 }
@@ -335,6 +339,7 @@ button {
 * { -webkit-tap-highlight-color: transparent; }
 
 button, .swap-icon { touch-action: manipulation; }
+
 
 
 
