@@ -9,7 +9,7 @@
 html, body{
     height: 100%;
     width: 100%;
-    scroll-behaviour: smooth;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -333,4 +333,5 @@ button {
 * { -webkit-tap-highlight-color: transparent; }
 
 button, .swap-icon { touch-action: manipulation; }
+
 
