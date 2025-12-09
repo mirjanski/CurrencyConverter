@@ -79,20 +79,20 @@
 
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("navLinks");
-    const navItems = document.querySelectorAll("nav-links a");
+    const navItems = document.querySelectorAll(".nav-links a");
 
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
 });
 
-    navItems.forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
+
+navItems.forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("active");
     });
 });
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('open');
-    });
 
