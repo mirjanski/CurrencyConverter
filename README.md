@@ -1,1 +1,1 @@
-# ideal-enigma
+This currency converter website allows users to convert between multiple international currencies using up-to-date exchange rates. It features a clean design, quick calculations, and accurate results, making it suitable for travelers, students, and professionals. Made by Mirzhan SCA-24C.
