@@ -75,18 +75,24 @@
 
 
 
-    // Smooth animation
     document.querySelector('header').style.transition = 'transform 0.5s ease';
 
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("navLinks");
+    const navItems = document.querySelectorAll("nav-links a");
 
     hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("active");
 });
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
+    navItems.forEach(link => {
         link.addEventListener("click", () => {
             navLinks.classList.remove("active");
     });
 });
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+    });
+
