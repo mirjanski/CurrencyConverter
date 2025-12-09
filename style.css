@@ -366,10 +366,6 @@ form button:hover{
         font-size: 16px;
     }
 
-    @media (max-width:768px) {
-
-    }
-
 
 @supports (-webkit-touch-callout: none) {
     body, .wrapper { height: -webkit-fill-available; }
@@ -378,3 +374,4 @@ form button:hover{
 
 * { -webkit-tap-highlight-color: transparent; }
 button, .swap-icon { touch-action: manipulation; }
+
