@@ -57,10 +57,9 @@ header{
     background: rgba(255,255,255,0.9);
     backdrop-filter: blur(12px);
 }
-
 .nav-links {
-    display: flex;           /* horizontal menu on desktop */
-    gap: 36px;               /* space between links */
+    display: flex;           
+    gap: 36px;               
     align-items: center;
 }   
 .nav-links a {
@@ -71,6 +70,19 @@ header{
     position: relative;
     padding-bottom: 4px;
     transition: 0.3s;
+    opacity: 0;
+    transform: translateY(-8px);
+    animation: navFade 0.5s ease forwards;
+}
+.navbar a:nth-child(1) { animation-delay: 0.1s; }
+.navbar a:nth-child(2) { animation-delay: 0.2s; }
+.navbar a:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes navFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .nav-links a:hover,
 .nav-links a.active{
@@ -277,9 +289,7 @@ form button:hover{
     color: #555;
 }
 
-/* ─────── MOBILE-FIRST & FULLY RESPONSIVE FIXES ─────── */
 
-/* 1. Smaller padding on very small screens */
 @media (max-width: 480px) {
     .logo { font-size: 26px; }
     .subtitle { font-size: 14px; }
@@ -303,7 +313,18 @@ form button:hover{
         gap: 0;
         display: none;
         border-bottom:1px solid #ddd;
-    }    
+    }
+    .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2.5px;
+    background: #308ad3;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}    
     .nav-links.active{
         display: flex;
     }
@@ -338,24 +359,22 @@ form button:hover{
     .swap-icon { font-size: 24px; padding: 12px 14px; }
 }
 
-
     .amount input,
     .select-box,
     button {
-        min-height: 56px;           /* Apple recommends ≥44px tap target */
-        font-size: 16px; /* Prevents iOS zoom on focus */
+        min-height: 56px;
+        font-size: 16px;
     }
 
     @media (max-width:768px) {
 
     }
 
-/* 5. Fix iOS Safari 100vh bug (mobile address bar) */
+
 @supports (-webkit-touch-callout: none) {
     body, .wrapper { height: -webkit-fill-available; }
     html { height: -webkit-fill-available; }
 }
 
-/* 6. Extra safety: ensure text never gets too small */
 * { -webkit-tap-highlight-color: transparent; }
 button, .swap-icon { touch-action: manipulation; }
